@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Arena Pro | Complete Sports Knowledge App</title>  <!-- Tailwind CSS -->  <script src="https://cdn.tailwindcss.com"></script>  <!-- Font Awesome -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">  <style>
+    :root{
+      --primary:#facc15;
+      --bg:#080808;
+      --card:#141414;
+    }
+    *{font-family:'Outfit',sans-serif}
+    body{background:radial-gradient(circle at top,#151515,#000);color:#fff}
+
+    .screen{display:none;min-height:100vh;padding:28px 20px 130px;animation:fade .45s ease}
+    .screen.active{display:block}
+    @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1}}
+
+    .card{
+      background:linear-gradient(145deg,#1b1b1b,#0f0f0f);
+      border-radius:26px;
+      padding:24px;
+      margin-bottom:22px;
+      box-shadow:0 22px 45px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.07);
+      transition:.35s ease;
+    }
+    .card:hover{transform:translateY(-6px) scale(1.02)}
+
+    .header h2{font-size:38px;font-weight:900;color:var(--primary)}
+    .sport-img{width:100%;height:240px;object-fit:cover;border-radius:22px;margin:16px 0;box-shadow:0 28px 55px rgba(0,0,0,.75)}
+
+    .bottom-bar{
+      position:fixed;bottom:0;left:0;width:100%;height:76px;
+      background:rgba(10,10,10,.96);backdrop-filter:blur(20px);
+      display:flex;justify-content:space-around;align-items:center;
+      border-top:1px solid rgba(255,255,255,.1);z-index:999;
+    }
+    .nav-btn{color:#888;font-size:11px;display:flex;flex-direction:column;align-items:center}
+    .nav-btn i{font-size:23px;margin-bottom:4px}
+    .nav-btn.active{color:var(--primary)}
+  </style></head>
+<body><!-- HOME --><div id="home" class="screen active">
+  <div class="header mb-6">
+    <p class="text-xs text-yellow-500 font-bold tracking-widest">COMPLETE SPORTS KNOWLEDGE APP</p>
+    <h2>Sports Arena Pro</h2>
+  </div>  <div class="card">
+    <h3 class="text-2xl font-black">Prakhar Patel</h3>
+    <p class="text-gray-400">Student Developer | Class 11</p>
+    <p class="text-sm text-gray-500 mt-2">A fully detailed professional sports application covering rules, history, equipment, players, health benefits and career scope of each sport.</p>
+  </div>  <div class="card">
+    <h4 class="font-bold mb-4">Core Features</h4>
+    <ul class="grid grid-cols-2 gap-3 text-sm text-gray-300">
+      <li>✔ Complete Sport Overview</li>
+      <li>✔ History & Origin</li>
+      <li>✔ Rules & Regulations</li>
+      <li>✔ Equipment & Gear</li>
+      <li>✔ Playing Field & Dimensions</li>
+      <li>✔ Player Positions</li>
+      <li>✔ Major Tournaments</li>
+      <li>✔ Famous Players</li>
+      <li>✔ Health Benefits</li>
+      <li>✔ Career Opportunities</li>
+    </ul>
+  </div>  <div class="grid grid-cols-2 gap-4">
+    <button onclick="showScreen('cricket')" class="card text-center">🏏 Cricket</button>
+    <button onclick="showScreen('football')" class="card text-center">⚽ Football</button>
+    <button onclick="showScreen('basketball')" class="card text-center">🏀 Basketball</button>
+    <button onclick="showScreen('badminton')" class="card text-center">🏸 Badminton</button>
+    <button onclick="showScreen('hockey')" class="card text-center">🏑 Hockey</button>
+    <button onclick="showScreen('kabaddi')" class="card text-center">🤼 Kabaddi</button>
+    <button onclick="showScreen('tennis')" class="card text-center">🎾 Tennis</button>
+    <button onclick="showScreen('athletics')" class="card text-center">🏃 Athletics</button>
+  </div>
+</div><!-- CRICKET --><div id="cricket" class="screen">
+  <div class="header"><h2>Cricket</h2></div>
+  <img class="sport-img" src="https://images.unsplash.com/photo-1531415074968-036ba1b575da" />
+  <div class="card"><b>Overview:</b> Cricket is a bat-and-ball game played between two teams of eleven players. It originated in England and is extremely popular in India.</div>
+  <div class="card"><b>Rules:</b> Runs are scored by hitting the ball and running between wickets. A team is all out when ten players are dismissed.</div>
+  <div class="card"><b>Equipment:</b> Bat, cricket ball, pads, gloves, helmet, stumps.</div>
+  <div class="card"><b>Major Tournaments:</b> ICC World Cup, T20 World Cup, Indian Premier League.</div>
+  <div class="card"><b>Health Benefits:</b> Improves stamina, reflexes, hand-eye coordination.</div>
+</div><!-- FOOTBALL --><div id="football" class="screen">
+  <div class="header"><h2>Football</h2></div>
+  <img class="sport-img" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018" />
+  <div class="card"><b>Overview:</b> Football is a team sport played by kicking a ball into the opponent’s goal.</div>
+  <div class="card"><b>Rules:</b> Each team has 11 players. Hands cannot be used except by the goalkeeper.</div>
+  <div class="card"><b>Equipment:</b> Football, boots, shin guards, goalpost.</div>
+  <div class="card"><b>Major Tournaments:</b> FIFA World Cup, UEFA Champions League.</div>
+  <div class="card"><b>Health Benefits:</b> Builds endurance, strength and teamwork.</div>
+</div><!-- BASKETBALL --><div id="basketball" class="screen">
+  <div class="header"><h2>Basketball</h2></div>
+  <img class="sport-img" src="https://images.unsplash.com/photo-1546519638-68e109498ffc" />
+  <div class="card"><b>Overview:</b> Basketball is a fast-paced indoor game where points are scored by shooting the ball through a hoop.</div>
+  <div class="card"><b>Equipment:</b> Basketball, hoop, backboard.</div>
+  <div class="card"><b>Major League:</b> NBA (National Basketball Association).</div>
+</div><!-- BADMINTON --><div id="badminton" class="screen">
+  <div class="header"><h2>Badminton</h2></div>
+  <img class="sport-img" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c" />
+  <div class="card"><b>Overview:</b> Badminton is a racket sport played with a shuttlecock across a net.</div>
+  <div class="card"><b>Health Benefits:</b> Improves agility, reflexes and stamina.</div>
+</div><!-- HOCKEY --><div id="hockey" class="screen">
+  <div class="header"><h2>Hockey</h2></div>
+  <img class="sport-img" src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf" />
+  <div class="card"><b>Overview:</b> Field hockey is a team sport played with sticks and a ball.</div>
+  <div class="card"><b>Major Achievements:</b> India has won multiple Olympic gold medals.</div>
+</div><!-- KABADDI --><div id="kabaddi" class="screen">
+  <div class="header"><h2>Kabaddi</h2></div>
+  <img class="sport-img" src="https://images.unsplash.com/photo-1599058917212-d750089bc07d" />
+  <div class="card"><b>Overview:</b> Kabaddi is a traditional Indian sport requiring strength, strategy and stamina.</div>
+  <div class="card"><b>League:</b> Pro Kabaddi League.</div>
+</div><!-- TENNIS --><div id="tennis" class="screen">
+  <div class="header"><h2>Tennis</h2></div>
+  <img class="sport-img" src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf" />
+  <div class="card"><b>Overview:</b> Tennis is played using rackets on a rectangular court divided by a net.</div>
+  <div class="card"><b>Grand Slams:</b> Wimbledon, US Open, French Open, Australian Open.</div>
+</div><!-- ATHLETICS --><div id="athletics" class="screen">
+  <div class="header"><h2>Athletics</h2></div>
+  <img class="sport-img" src="https://images.unsplash.com/photo-1546484959-f5b8b6e2c95d" />
+  <div class="card"><b>Overview:</b> Athletics includes running, jumping and throwing events.</div>
+  <div class="card"><b>Events:</b> Sprint, marathon, long jump, javelin throw.</div>
+</div><!-- ABOUT --><div id="more" class="screen">
+  <div class="header"><h2>About Project</h2></div>
+  <div class="card">This project is created for academic and educational purposes to demonstrate complete sports knowledge with modern app-style UI.</div>
+</div><!-- NAV --><div class="bottom-bar">
+  <button id="btn-home" onclick="showScreen('home')" class="nav-btn active"><i class="fa fa-home"></i>Home</button>
+  <button id="btn-cricket" onclick="showScreen('cricket')" class="nav-btn"><i class="fa fa-baseball"></i>Cricket</button>
+  <button id="btn-football" onclick="showScreen('football')" class="nav-btn"><i class="fa fa-futbol"></i>Football</button>
+  <button id="btn-more" onclick="showScreen('more')" class="nav-btn"><i class="fa fa-bars"></i>More</button>
+</div><script>
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  const btn=document.getElementById('btn-'+id);
+  if(btn)btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+</script></body>
+</html>
